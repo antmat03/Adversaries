@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "adversaries:block/potion_block"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+package org.resinanzz.adversaries.init;
+
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import org.resinanzz.adversaries.Adversaries;
+import org.resinanzz.adversaries.entity.AngelEntity;
+import org.resinanzz.adversaries.entity.OverworldChampionEntity;
+import org.resinanzz.adversaries.entity.PunchProjectileEntity;
+import org.resinanzz.adversaries.entity.WizardEntity;
+
+
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+public class AdversariesModEntities {
+    public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, Adversaries.MOD_ID);
+    public static final DeferredHolder<EntityType<?>, EntityType<OverworldChampionEntity>> OVERWORLD_CHAMPION = register("overworld_champion",
+            EntityType.Builder.<OverworldChampionEntity>of(OverworldChampionEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+                    .sized(0.8f, 2.3f));
+    public static final DeferredHolder<EntityType<?>, EntityType<AngelEntity>> ANGEL = register("angel_adv", EntityType.Builder.<AngelEntity>of(AngelEntity::new, MobCategory.CREATURE)
+            .setShouldReceiveVelocityUpdates(true)
+            .setTrackingRange(15)
+            .setUpdateInterval(3)
+            .sized(0.8f, 2f));
+    public static final DeferredHolder<EntityType<?>, EntityType<WizardEntity>> WIZARD = register("wizard_adv", EntityType.Builder.<WizardEntity>of(WizardEntity::new, MobCategory.CREATURE)
+            .setShouldReceiveVelocityUpdates(true)
+            .setTrackingRange(15)
+            .setUpdateInterval(3)
+            .sized(0.8f, 2f));
+    public static final DeferredHolder<EntityType<?>, EntityType<PunchProjectileEntity>> PUNCH_PROJECTILE = register("punch_projectile", EntityType.Builder.<PunchProjectileEntity>of(PunchProjectileEntity::new, MobCategory.MISC)
+            .sized(1.2f, 1.2f));
+
+
+    // Start of user code block custom entity
+    // End of user code block custom entity
+    private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
+        return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
+    }
+
+    @SubscribeEvent
+    public static void init(RegisterSpawnPlacementsEvent event) {
+        OverworldChampionEntity.init(event);
+        AngelEntity.init(event);
+        PunchProjectileEntity.init(event);
+        WizardEntity.init(event);
+    }
+
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(OVERWORLD_CHAMPION.get(), OverworldChampionEntity.createAttributes().build());
+        event.put(ANGEL.get(), AngelEntity.createAttributes().build());
+        event.put(WIZARD.get(), AngelEntity.createAttributes().build());
+
+    }
+}
+

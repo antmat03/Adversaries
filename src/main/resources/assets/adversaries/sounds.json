@@ -1,0 +1,26 @@
+{
+  "magic_shoot": {
+    "sounds": [
+      {
+        "name": "adversaries:magic_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "monster_growl": {
+    "sounds": [
+      {
+        "name": "adversaries:monster_growl",
+        "stream": false
+      }
+    ]
+  },
+  "magic_start": {
+    "sounds": [
+      {
+        "name": "adversaries:magic_start",
+        "stream": false
+      }
+    ]
+  }
+}
