@@ -3,6 +3,8 @@ package org.resinanzz.adversaries.init;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -22,6 +24,7 @@ public class AdversariesModItems {
     public static final DeferredItem<Item> WRITTEN_CONTRACT = REGISTRY.register("written_contract", WrittenContractItem::new);
     public static final DeferredItem<Item> SCROLL = REGISTRY.register("scroll", ()-> new Item(new Item.Properties().stacksTo(64)));
     public static final DeferredItem<Item> ADVERSARIES_WAND = REGISTRY.register("adversaries_wand", WandItem::new);
+    public static final DeferredItem<Item> WARBRAND = REGISTRY.register("warbrand", () -> new SwordItem(Tiers.IRON,new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 3, -1.4F))));
     public static final DeferredItem<Item> REACTIVE_STRIP = REGISTRY.register("reactive_strip", ()-> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> LAMBDAMETER = REGISTRY.register("lambdameter", ()-> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> GAUNTLET_OF_RAGE = REGISTRY.register("gauntlet", GauntletOfRageItem::new);

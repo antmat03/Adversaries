@@ -29,9 +29,11 @@ public class GauntletOfRageItem extends Item {
                     PunchProjectileEntity.shoot(level, player, level.getRandom(), 1, 2, 0d, 1f, 1);
                     EnergyHandler.addEnergy(player, -5, AdversariesModAttachments.BLOOD_ENERGY, AdversariesModAttachments.BLOOD_ENERGY_LIMIT);
                     System.out.println(player.getData(AdversariesModAttachments.BLOOD_ENERGY));
+                    player.getCooldowns().addCooldown(this, 8);
                 }
             }
-            if(energy >= 10 && player.isCrouching()){
+            if(energy >= 50 && player.isCrouching()){
+                EnergyHandler.addEnergy(player, -50, AdversariesModAttachments.BLOOD_ENERGY, AdversariesModAttachments.BLOOD_ENERGY_LIMIT);
                 PunchVolley.doVolley(level, player, level.getRandom(), 1, 2, 0d, 1f, 1.3f, 50);
             }
 

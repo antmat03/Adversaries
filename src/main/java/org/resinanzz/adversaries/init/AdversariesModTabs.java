@@ -27,6 +27,7 @@ public class AdversariesModTabs {
                 tabData.accept(AdversariesModItems.CELESTRIUM_INGOT.get());
                 tabData.accept(AdversariesModItems.CRUCIBLE_STEEL_INGOT.get());
                 tabData.accept(AdversariesModItems.ADVERSARIES_WAND.get());
+                tabData.accept(AdversariesModItems.WARBRAND.get());
                 tabData.accept(AdversariesModItems.SCROLL.get());
                 tabData.accept(AdversariesModItems.WRITTEN_CONTRACT.get());
                 tabData.accept(AdversariesModItems.OVERWORLD_CHAMPION_SPAWN_EGG.get());

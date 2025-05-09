@@ -20,9 +20,11 @@
   "item.adversaries.written_contract": "Written Contract",
   "item.adversaries.scroll": "Scroll",
   "item.adversaries.reactive_strip": "Reactive Strip",
+  "item.adversaries.crucible_steel_ingot": "Crucible Steel Ingot",
   "_comment": "tools",
   "item.adversaries.adversaries_wand": "Copper Coil Wand",
   "item.adversaries.skull": "Skull",
+  "item.adversaries.warbrand": "Ancient Warbrand",
   "item.adversaries.gauntlet": "Gauntlet of Rage",
   "item.adversaries.lambdameter": "Lambdameter"
 }
