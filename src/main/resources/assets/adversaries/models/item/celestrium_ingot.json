@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "adversaries:item/scroll"
+    "layer0": "adversaries:item/celestrium_ingot"
   }
 }
