@@ -41,7 +41,7 @@ public class AdversariesModItems {
     //spawneggs
     public static final DeferredItem<Item> OVERWORLD_CHAMPION_SPAWN_EGG = REGISTRY.register("overworld_champion_spawn_egg", () -> new DeferredSpawnEggItem(AdversariesModEntities.OVERWORLD_CHAMPION, -16777216, -10092544, new Item.Properties()));
     public static final DeferredItem<Item> ANGEL_SPAWN_EGG = REGISTRY.register("angel_spawn_egg", () -> new DeferredSpawnEggItem(AdversariesModEntities.ANGEL, -16777216, -10092544, new Item.Properties()));
-    public static final DeferredItem<Item> WIZARD_SPAWN_EGG = REGISTRY.register("wizard_spawn_egg", () -> new DeferredSpawnEggItem(AdversariesModEntities.WIZARD, -16777216, -10092544, new Item.Properties()));
+    public static final DeferredItem<Item> WIZARD_ELF_SPAWN_EGG = REGISTRY.register("wizard_elf_spawn_egg", () -> new DeferredSpawnEggItem(AdversariesModEntities.WIZARD_ELF, -16777216, -10092544, new Item.Properties()));
     //runes
     public static final DeferredItem<Item> FIRE_SIGIL = REGISTRY.register("fire_sigil", ()-> new Item(new Item.Properties().stacksTo(64)));
     public static final DeferredItem<Item> INFINITE_DEATH = REGISTRY.register("infinite_death", InfiniteDeathItem::new);

@@ -1,7 +1,6 @@
 package org.resinanzz.adversaries.entity;
 
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -14,9 +13,9 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
-public class WizardEntity<T extends LivingEntity> extends PathfinderMob {
-    public static final EntityDataAccessor<Integer> DATA_phase = SynchedEntityData.defineId(WizardEntity.class, EntityDataSerializers.INT);
-    public WizardEntity(EntityType<WizardEntity> Type, Level level) {
+public class WizardElfEntity<T extends LivingEntity> extends PathfinderMob {
+    public static final EntityDataAccessor<Integer> DATA_phase = SynchedEntityData.defineId(WizardElfEntity.class, EntityDataSerializers.INT);
+    public WizardElfEntity(EntityType<WizardElfEntity> Type, Level level) {
         super(Type, level);
         xpReward = 0;
         setNoAi(true);

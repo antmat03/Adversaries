@@ -14,7 +14,7 @@ import org.resinanzz.adversaries.Adversaries;
 import org.resinanzz.adversaries.entity.AngelEntity;
 import org.resinanzz.adversaries.entity.OverworldChampionEntity;
 import org.resinanzz.adversaries.entity.PunchProjectileEntity;
-import org.resinanzz.adversaries.entity.WizardEntity;
+import org.resinanzz.adversaries.entity.WizardElfEntity;
 
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -29,11 +29,11 @@ public class AdversariesModEntities {
             .setTrackingRange(15)
             .setUpdateInterval(3)
             .sized(0.8f, 2f));
-    public static final DeferredHolder<EntityType<?>, EntityType<WizardEntity>> WIZARD = register("wizard_adv", EntityType.Builder.<WizardEntity>of(WizardEntity::new, MobCategory.CREATURE)
+    public static final DeferredHolder<EntityType<?>, EntityType<WizardElfEntity>> WIZARD_ELF = register("wizard_elf_adv", EntityType.Builder.<WizardElfEntity>of(WizardElfEntity::new, MobCategory.CREATURE)
             .setShouldReceiveVelocityUpdates(true)
             .setTrackingRange(15)
             .setUpdateInterval(3)
-            .sized(0.8f, 2f));
+            .sized(0.7f, 1.4f));
     public static final DeferredHolder<EntityType<?>, EntityType<PunchProjectileEntity>> PUNCH_PROJECTILE = register("punch_projectile", EntityType.Builder.<PunchProjectileEntity>of(PunchProjectileEntity::new, MobCategory.MISC)
             .sized(1.2f, 1.2f));
 
@@ -49,14 +49,14 @@ public class AdversariesModEntities {
         OverworldChampionEntity.init(event);
         AngelEntity.init(event);
         PunchProjectileEntity.init(event);
-        WizardEntity.init(event);
+        WizardElfEntity.init(event);
     }
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(OVERWORLD_CHAMPION.get(), OverworldChampionEntity.createAttributes().build());
         event.put(ANGEL.get(), AngelEntity.createAttributes().build());
-        event.put(WIZARD.get(), AngelEntity.createAttributes().build());
+        event.put(WIZARD_ELF.get(), AngelEntity.createAttributes().build());
 
     }
 }

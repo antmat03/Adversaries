@@ -32,7 +32,7 @@ public class AdversariesModTabs {
                 tabData.accept(AdversariesModItems.WRITTEN_CONTRACT.get());
                 tabData.accept(AdversariesModItems.OVERWORLD_CHAMPION_SPAWN_EGG.get());
                 tabData.accept(AdversariesModItems.ANGEL_SPAWN_EGG.get());
-                tabData.accept(AdversariesModItems.WIZARD_SPAWN_EGG.get());
+                tabData.accept(AdversariesModItems.WIZARD_ELF_SPAWN_EGG.get());
                 tabData.accept(AdversariesModItems.GAUNTLET_OF_RAGE.get());
                 tabData.accept(AdversariesModItems.FIRE_SIGIL.get());
                 tabData.accept(AdversariesModItems.INFINITE_DEATH.get());
