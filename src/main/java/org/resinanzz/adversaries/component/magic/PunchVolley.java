@@ -1,4 +1,4 @@
-package org.resinanzz.adversaries.procedures;
+package org.resinanzz.adversaries.component.magic;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

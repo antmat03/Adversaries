@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 import org.resinanzz.adversaries.component.AdversariesModAttachments;
 import org.resinanzz.adversaries.component.EnergyHandler;
 import org.resinanzz.adversaries.entity.PunchProjectileEntity;
-import org.resinanzz.adversaries.procedures.PunchVolley;
+import org.resinanzz.adversaries.component.magic.PunchVolley;
 
 public class GauntletOfRageItem extends Item {
     public GauntletOfRageItem() {

@@ -21,8 +21,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-import org.resinanzz.adversaries.procedures.BossAttackGoal;
-import org.resinanzz.adversaries.procedures.BossTargetingGoal;
+import org.resinanzz.adversaries.entity.ai.BossAttackGoal;
+import org.resinanzz.adversaries.entity.ai.BossTargetingGoal;
 
 public class OverworldChampionEntity<T extends LivingEntity> extends PathfinderMob {
     public static final EntityDataAccessor<Integer> DATA_phase = SynchedEntityData.defineId(OverworldChampionEntity.class, EntityDataSerializers.INT);

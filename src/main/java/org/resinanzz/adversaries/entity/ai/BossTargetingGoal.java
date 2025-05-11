@@ -1,4 +1,4 @@
-package org.resinanzz.adversaries.procedures;
+package org.resinanzz.adversaries.entity.ai;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.PathfinderMob;

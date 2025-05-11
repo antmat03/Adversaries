@@ -1,4 +1,4 @@
-package org.resinanzz.adversaries.procedures;
+package org.resinanzz.adversaries.entity.ai;
 
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
