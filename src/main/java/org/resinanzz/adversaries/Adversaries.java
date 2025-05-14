@@ -23,7 +23,7 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
-import org.resinanzz.adversaries.client.PunchProjectileRenderer;
+import org.resinanzz.adversaries.client.magicRenderers.PunchProjectileRenderer;
 import org.resinanzz.adversaries.component.AdversariesModAttachments;
 import org.resinanzz.adversaries.init.*;
 import org.resinanzz.adversaries.particle.AdversariesModParticles;
