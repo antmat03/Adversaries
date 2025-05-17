@@ -27,7 +27,7 @@ public class AdversariesModItems {
     //tools
     public static final DeferredItem<Item> SOUL_STONE = REGISTRY.register("soul_stone", SoulStoneItem::new);
     public static final DeferredItem<Item> WRITTEN_CONTRACT = REGISTRY.register("written_contract", WrittenContractItem::new);
-    public static final DeferredItem<Item> ADVERSARIES_WAND = REGISTRY.register("adversaries_wand", WandItem::new);
+    public static final DeferredItem<Item> DEBUG_WAND = REGISTRY.register("debug_wand", WandItem::new);
     public static final DeferredItem<Item> LAMBDAMETER = REGISTRY.register("lambdameter", ()-> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> REACTIVE_STRIP = REGISTRY.register("reactive_strip", ()-> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> GAUNTLET_OF_RAGE = REGISTRY.register("gauntlet", GauntletOfRageItem::new);
