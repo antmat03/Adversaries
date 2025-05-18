@@ -7,7 +7,10 @@ import net.neoforged.neoforge.attachment.AttachmentType;
 import java.util.function.Supplier;
 
 public abstract class EnergyHandler {
-
+    public Player player;
+    public EnergyHandler(Player player){
+        this.player = player;
+    }
 
     public static void setEnergy(Player player, int newEnergy, Supplier<AttachmentType<Integer>> type, Supplier<AttachmentType<Integer>> typeLimit) {
         if(player.level().isClientSide){return;}
@@ -19,7 +22,6 @@ public abstract class EnergyHandler {
 
     public static void addEnergy(Player player, int amount, Supplier<AttachmentType<Integer>> type, Supplier<AttachmentType<Integer>> typeLimit){
         int energy = player.getData(type);
-
         setEnergy(player, energy + amount, type, typeLimit);
     }
     public static void setEnergyLimit(Player player, int newLimit, Supplier<AttachmentType<Integer>> typeLimit){
