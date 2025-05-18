@@ -20,8 +20,8 @@ public class EntityEvent {
         LivingEntity entity = event.getEntity();
         DamageSource source = event.getSource();
         Player player = (Player) source.getEntity();
-        if(entity.level().isClientSide)return;
-        assert player != null;
+        if(entity.level().isClientSide || player == null)return;
+
         if(player.getInventory().contains(AdversariesModItems.TOTEM_OF_FLESH.toStack())){
             if(entity instanceof LivingEntity){
                 EnergyHandler.addEnergy(player, 5, AdversariesModAttachments.BLOOD_ENERGY, AdversariesModAttachments.BLOOD_ENERGY_LIMIT);
