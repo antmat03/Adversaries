@@ -11,10 +11,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
-import org.resinanzz.adversaries.component.AdversariesModAttachments;
+import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.component.EnergyHandler;
 import org.resinanzz.adversaries.entity.PunchProjectileEntity;
-import org.resinanzz.adversaries.component.magic.PunchVolley;
+import org.resinanzz.adversaries.component.magic.BloodMagic;
 
 public class GauntletOfRageItem extends Item {
     public GauntletOfRageItem() {
@@ -36,7 +36,7 @@ public class GauntletOfRageItem extends Item {
             }
             if(energy >= 50 && player.isCrouching()){
                 EnergyHandler.addEnergy(player, -50, AdversariesModAttachments.BLOOD_ENERGY, AdversariesModAttachments.BLOOD_ENERGY_LIMIT);
-                PunchVolley.doVolley(level, player, level.getRandom(), 1, 2, 0d, 1f, 1.3f, 50);
+                BloodMagic.doVolley(level, player, level.getRandom(), 1, 2, 0d, 1f, 1.3f, 50);
                 level.playSound(player, player.getX(), player.getY(), player.getZ(), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("adversaries:monster_growl")), SoundSource.PLAYERS, (float) (1.3-0.9f), 1f);
                 player.swing(hand);
             }
