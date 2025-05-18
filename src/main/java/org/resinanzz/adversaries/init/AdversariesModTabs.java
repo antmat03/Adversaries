@@ -38,7 +38,7 @@ public class AdversariesModTabs {
                 tabData.accept(AdversariesModItems.INFINITE_DEATH.get());
                 tabData.accept(AdversariesModItems.PURIFIED_FLESH.get());
                 tabData.accept(AdversariesModItems.DWELLER_HEART.get());
-                tabData.accept(AdversariesModItems.FREYAN_DUST.get());
+                tabData.accept(AdversariesModItems.EIK_FAT.get());
                 tabData.accept(AdversariesModItems.GLOWSTONE_CORE.get());
                 tabData.accept(AdversariesModItems.REACTIVE_STRIP.get());
                 tabData.accept(AdversariesModItems.LAMBDAMETER.get());
