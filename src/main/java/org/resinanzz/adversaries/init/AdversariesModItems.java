@@ -30,10 +30,18 @@ public class AdversariesModItems {
     public static final DeferredItem<Item> DEBUG_WAND = REGISTRY.register("debug_wand", WandItem::new);
     public static final DeferredItem<Item> LAMBDAMETER = REGISTRY.register("lambdameter", ()-> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> REACTIVE_STRIP = REGISTRY.register("reactive_strip", ()-> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> GRADUATED_DREAM_CATCHER = REGISTRY.register("graduated_dream_catcher", ()-> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> ELECTROCHROMALOG = REGISTRY.register("electrochromalog", ()-> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> ACID_TEST = REGISTRY.register("acid_test", ()-> new Item(new Item.Properties().stacksTo(1)));
+        //TODO make SHACKLES do more knockback but mid damage
+    public static final DeferredItem<Item> SHACKLES = REGISTRY.register("shackles", () -> new SwordItem(Tiers.IRON,new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 2, -1.5F))));
     public static final DeferredItem<Item> GAUNTLET_OF_RAGE = REGISTRY.register("gauntlet", GauntletOfRageItem::new);
-
-    public static final DeferredItem<Item> WARBRAND = REGISTRY.register("warbrand", () -> new SwordItem(Tiers.IRON,new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 3, -1.4F))));
-
+    public static final DeferredItem<Item> WARBRAND = REGISTRY.register("warbrand", () -> new SwordItem(Tiers.IRON,new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 3, -1.8F))));
+    public static final DeferredItem<Item> TOTEM_OF_FLESH = REGISTRY.register("totem_of_flesh", SoulStoneItem::new);
+    public static final DeferredItem<Item> WOOD_WAND = REGISTRY.register("wood_wand", SoulStoneItem::new);
+    public static final DeferredItem<Item> RUNE_SLATE = REGISTRY.register("rune_slate", SoulStoneItem::new);
+    public static final DeferredItem<Item> COPPER_WAND = REGISTRY.register("copper_tipped_wand", SoulStoneItem::new);
+    //armor
     //blockitems
     public static final DeferredItem<Item> POTION_BLOCK = block(AdversariesModBlocks.POTION_BLOCK);
     public static final DeferredItem<Item> DEMON_BLOOD_ORE = block(AdversariesModBlocks.DEMON_BLOOD_ORE);
@@ -48,6 +56,9 @@ public class AdversariesModItems {
 
     //food
     public static final DeferredItem<Item> PURIFIED_FLESH = REGISTRY.register("purified_flesh", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
+    public static final DeferredItem<Item> FREYAN_DUST = REGISTRY.register("freyan_dust", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
+    public static final DeferredItem<Item> DWELLER_HEART = REGISTRY.register("dweller_heart", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
+    public static final DeferredItem<Item> GLOWSTONE_CORE = REGISTRY.register("glowstone_core", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
     private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
         return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
     }
