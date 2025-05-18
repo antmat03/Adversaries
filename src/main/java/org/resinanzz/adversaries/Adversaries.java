@@ -1,34 +1,24 @@
 package org.resinanzz.adversaries;
 
-import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.util.Tuple;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.util.thread.SidedThreadGroups;
-import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
-import org.resinanzz.adversaries.client.magicRenderers.PunchProjectileRenderer;
-import org.resinanzz.adversaries.component.AdversariesModAttachments;
+import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.init.*;
+import org.resinanzz.adversaries.init.AdversariesArmorMaterials;
 import org.resinanzz.adversaries.particle.AdversariesModParticles;
-import org.resinanzz.adversaries.particle.PunchParticle;
-import org.slf4j.Logger;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -43,7 +33,6 @@ public class Adversaries
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "adversaries";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
 
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -57,12 +46,12 @@ public class Adversaries
         // Register the Deferred Register to the mod event bus so blocks get registered
         AdversariesModBlocks.REGISTRY.register(modEventBus);
         AdversariesModItems.REGISTRY.register(modEventBus);
-        AdversariesModTabs.REGISTRY.register(modEventBus);
+        AdversariesModItems.TAB_REGISTRY.register(modEventBus);
         AdversariesModEntities.REGISTRY.register(modEventBus);
         AdversariesModSounds.REGISTRY.register(modEventBus);
         AdversariesModParticles.REGISTRY.register(modEventBus);
         AdversariesModAttachments.REGISTRY.register(modEventBus);
-
+        AdversariesArmorMaterials.REGISTRY.register(modEventBus);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
