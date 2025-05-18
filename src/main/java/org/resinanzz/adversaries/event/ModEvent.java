@@ -39,12 +39,7 @@ public class ModEvent {
         if(event.getEntity().level().isClientSide) return;
         ConsumeRegenItemEvent.Food(event);
     }
-    @SubscribeEvent
-    static void gamemodeEvent(PlayerEvent.PlayerChangeGameModeEvent event){
-        if(event.getEntity().level().isClientSide){return;}
-        Player player = event.getEntity();
-        player.getPersistentData().putBoolean("isPlayerCreative", player.isCreative());
-    }
+
 
     @SubscribeEvent
     public static void ItemRightClicked(PlayerInteractEvent.RightClickItem event){
@@ -76,7 +71,6 @@ public class ModEvent {
             }
             if (entity instanceof Player _player) {
                 EnergyHandler.setEnergy(_player, 0, AdversariesModAttachments.BLOOD_ENERGY, AdversariesModAttachments.BLOOD_ENERGY_LIMIT);
-                _player.getPersistentData().putBoolean("isEnergyInfinite", false);
             }
         }
     }
