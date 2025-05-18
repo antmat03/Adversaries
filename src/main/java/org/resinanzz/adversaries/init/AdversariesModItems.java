@@ -33,7 +33,7 @@ public class AdversariesModItems {
     public static final DeferredItem<Item> REACTIVE_STRIP = REGISTRY.register("reactive_strip", ()-> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> GRADUATED_DREAM_CATCHER = REGISTRY.register("graduated_dream_catcher", ()-> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> ELECTROCHROMALOG = REGISTRY.register("electrochromalog", ()-> new Item(new Item.Properties().stacksTo(1)));
-    public static final DeferredItem<Item> ACID_TEST = REGISTRY.register("acid_test", ()-> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BRAIN_SCANNER = REGISTRY.register("brain_scanner", ()-> new Item(new Item.Properties().stacksTo(1)));
         //TODO make SHACKLES do more knockback but mid damage
     public static final DeferredItem<Item> SHACKLES = REGISTRY.register("shackles", () -> new SwordItem(Tiers.IRON,new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 2, -1.5F))));
     public static final DeferredItem<Item> GAUNTLET_OF_RAGE = REGISTRY.register("gauntlet", GauntletOfRageItem::new);
