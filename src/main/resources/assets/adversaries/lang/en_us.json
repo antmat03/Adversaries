@@ -4,7 +4,7 @@
   "entity.adversaries.overworld_champion": "Overworld Champion",
   "entity.adversaries.angel_adv": "Angel",
   "entity.adversaries.wizard_elf_adv": "Elf Wizard",
-  "entity.adversaries.punch_projectile": "Punch",
+  "entity.adversaries.nether_prisoner": "Nether Prisoner",
   "entity.adversaries.punch_projectile": "Punch Magic",
   "_comment": "blocks",
   "block.adversaries.potion_block": "Potion Block",

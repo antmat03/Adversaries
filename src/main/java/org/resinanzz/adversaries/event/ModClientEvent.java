@@ -38,5 +38,6 @@ public class ModClientEvent {
         event.registerEntityRenderer(AdversariesModEntities.ANGEL.get(), AngelEntityRenderer::new);
         event.registerEntityRenderer(AdversariesModEntities.WIZARD_ELF.get(), ElfEntityRenderer::new);
         event.registerEntityRenderer(AdversariesModEntities.PUNCH_PROJECTILE.get(), PunchProjectileRenderer::new);
+        event.registerEntityRenderer(AdversariesModEntities.PRISONER.get(), PrisonerRenderer::new);
     }
 }
