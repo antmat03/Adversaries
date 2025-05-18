@@ -42,13 +42,5 @@ public class AdversariesModEntities {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
     }
 
-
-    @SubscribeEvent
-    public static void registerAttributes(EntityAttributeCreationEvent event) {
-        event.put(OVERWORLD_CHAMPION.get(), OverworldChampionEntity.createAttributes().build());
-        event.put(ANGEL.get(), AngelEntity.createAttributes().build());
-        event.put(WIZARD_ELF.get(), AngelEntity.createAttributes().build());
-
-    }
 }
 

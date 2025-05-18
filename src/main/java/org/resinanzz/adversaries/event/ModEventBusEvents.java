@@ -22,4 +22,11 @@ public class ModEventBusEvents {
         WizardElfEntity.init(event);
         PrisonerEntity.init(event);
     }
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(AdversariesModEntities.OVERWORLD_CHAMPION.get(), OverworldChampionEntity.createAttributes().build());
+        event.put(AdversariesModEntities.ANGEL.get(), AngelEntity.createAttributes().build());
+        event.put(AdversariesModEntities.WIZARD_ELF.get(), WizardElfEntity.createAttributes().build());
+
+    }
 }
