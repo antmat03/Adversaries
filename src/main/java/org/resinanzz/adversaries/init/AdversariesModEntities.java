@@ -11,10 +11,8 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.resinanzz.adversaries.Adversaries;
-import org.resinanzz.adversaries.entity.AngelEntity;
-import org.resinanzz.adversaries.entity.OverworldChampionEntity;
-import org.resinanzz.adversaries.entity.PunchProjectileEntity;
-import org.resinanzz.adversaries.entity.WizardElfEntity;
+import org.resinanzz.adversaries.entity.*;
+import oshi.jna.platform.mac.SystemB;
 
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -44,13 +42,6 @@ public class AdversariesModEntities {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
     }
 
-    @SubscribeEvent
-    public static void init(RegisterSpawnPlacementsEvent event) {
-        OverworldChampionEntity.init(event);
-        AngelEntity.init(event);
-        PunchProjectileEntity.init(event);
-        WizardElfEntity.init(event);
-    }
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
