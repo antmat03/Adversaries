@@ -26,7 +26,7 @@ public class AdversariesModTabs {
                 tabData.accept(AdversariesModItems.RAW_DEMON_BLOOD.get());
                 tabData.accept(AdversariesModItems.CELESTRIUM_INGOT.get());
                 tabData.accept(AdversariesModItems.CRUCIBLE_STEEL_INGOT.get());
-                tabData.accept(AdversariesModItems.ADVERSARIES_WAND.get());
+                tabData.accept(AdversariesModItems.DEBUG_WAND.get());
                 tabData.accept(AdversariesModItems.WARBRAND.get());
                 tabData.accept(AdversariesModItems.SCROLL.get());
                 tabData.accept(AdversariesModItems.WRITTEN_CONTRACT.get());
@@ -42,12 +42,20 @@ public class AdversariesModTabs {
                 tabData.accept(AdversariesModItems.GLOWSTONE_CORE.get());
                 tabData.accept(AdversariesModItems.REACTIVE_STRIP.get());
                 tabData.accept(AdversariesModItems.LAMBDAMETER.get());
+                tabData.accept(AdversariesModItems.RUNE_SLATE.get());
+                tabData.accept(AdversariesModItems.WOOD_WAND.get());
+                tabData.accept(AdversariesModItems.COPPER_WAND.get());
+                tabData.accept(AdversariesModItems.TOTEM_OF_FLESH.get());
             }).withSearchBar().build());
 
     @SubscribeEvent
     public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
         if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            tabData.accept(AdversariesModItems.ADVERSARIES_WAND.get());
+            tabData.accept(AdversariesModItems.DEBUG_WAND.get());
+            tabData.accept(AdversariesModItems.RUNE_SLATE.get());
+            tabData.accept(AdversariesModItems.WOOD_WAND.get());
+            tabData.accept(AdversariesModItems.COPPER_WAND.get());
+            tabData.accept(AdversariesModItems.TOTEM_OF_FLESH.get());
         } else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
             tabData.accept(AdversariesModItems.OVERWORLD_CHAMPION_SPAWN_EGG.get());
             tabData.accept(AdversariesModItems.ANGEL_SPAWN_EGG.get());
