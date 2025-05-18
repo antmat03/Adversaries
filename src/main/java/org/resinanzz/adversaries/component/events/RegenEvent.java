@@ -3,8 +3,8 @@ package org.resinanzz.adversaries.component.events;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
-import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.component.EnergyHandler;
+import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.init.AdversariesModItems;
 
 public class RegenEvent {

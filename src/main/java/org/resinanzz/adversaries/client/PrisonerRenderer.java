@@ -6,7 +6,6 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
 import net.minecraft.resources.ResourceLocation;
-import org.resinanzz.adversaries.client.models.AngelEntityModel;
 import org.resinanzz.adversaries.client.models.PrisonerEntityModel;
 import org.resinanzz.adversaries.entity.PrisonerEntity;
 

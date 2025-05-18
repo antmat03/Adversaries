@@ -10,15 +10,15 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import org.resinanzz.adversaries.Adversaries;
-import org.resinanzz.adversaries.component.AdversariesModAttachments;
-import org.resinanzz.adversaries.component.events.ConsumeRegenItemEvent;
-import org.resinanzz.adversaries.entity.PunchProjectileEntity;
-import org.resinanzz.adversaries.init.AdversariesModItems;
 import org.resinanzz.adversaries.component.EnergyHandler;
+import org.resinanzz.adversaries.component.events.RegenEvent;
+import org.resinanzz.adversaries.component.magic.FayeMagic;
+import org.resinanzz.adversaries.entity.PunchProjectileEntity;
+import org.resinanzz.adversaries.init.AdversariesModAttachments;
+import org.resinanzz.adversaries.init.AdversariesModItems;
 
 @EventBusSubscriber(modid = Adversaries.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvent {
@@ -37,7 +37,7 @@ public class ModEvent {
     @SubscribeEvent
     public static void onEntityEat(LivingEntityUseItemEvent.Finish event){
         if(event.getEntity().level().isClientSide) return;
-        ConsumeRegenItemEvent.Food(event);
+        RegenEvent.Food(event);
     }
 
 
@@ -54,9 +54,8 @@ public class ModEvent {
 
     }
 
-
     @SubscribeEvent
-    public static void entityJoins(EntityJoinLevelEvent event) {
+    public static void  entityJoins(EntityJoinLevelEvent event) {
 
         if (event.getLevel().isClientSide) {
             Entity entity = event.getEntity();

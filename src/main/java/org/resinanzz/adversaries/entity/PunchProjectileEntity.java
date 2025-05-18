@@ -108,7 +108,7 @@ public class PunchProjectileEntity extends AbstractArrow {
     public static void init(RegisterSpawnPlacementsEvent event) {
     }
 
-    public static PunchProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, double knockback, float pitch, float volume) {
+    public static void shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, double knockback, float pitch, float volume) {
         PunchProjectileEntity entityarrow = new PunchProjectileEntity(AdversariesModEntities.PUNCH_PROJECTILE.get(), entity, world, null);
         entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
         entityarrow.setSilent(true);
@@ -119,7 +119,6 @@ public class PunchProjectileEntity extends AbstractArrow {
         entityarrow.setKnockback(knockback);
         world.addFreshEntity(entityarrow);
         world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("adversaries:magic_shoot")), SoundSource.PLAYERS, volume, pitch / (random.nextFloat() * 0.5f + 1) + 0.5f);
-        return entityarrow;
     }
 
 }

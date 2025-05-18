@@ -7,9 +7,7 @@ import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.client.particle.SoulParticle;
 import net.minecraft.resources.ResourceLocation;
-import org.resinanzz.adversaries.Adversaries;
 import org.resinanzz.adversaries.entity.PunchProjectileEntity;
 
 public class PunchProjectileModel<T extends PunchProjectileEntity> extends EntityModel<T>{

@@ -11,10 +11,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
-import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.component.EnergyHandler;
-import org.resinanzz.adversaries.entity.PunchProjectileEntity;
 import org.resinanzz.adversaries.component.magic.BloodMagic;
+import org.resinanzz.adversaries.entity.PunchProjectileEntity;
+import org.resinanzz.adversaries.init.AdversariesModAttachments;
 
 public class GauntletOfRageItem extends Item {
     public GauntletOfRageItem() {

@@ -6,8 +6,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
-import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.component.EnergyHandler;
+import org.resinanzz.adversaries.init.AdversariesModAttachments;
 
 public class InfiniteDeathItem extends AbstractTalismanItem{
     public InfiniteDeathItem() {

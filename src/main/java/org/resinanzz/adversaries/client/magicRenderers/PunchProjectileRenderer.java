@@ -16,7 +16,7 @@ import org.resinanzz.adversaries.client.models.PunchProjectileModel;
 import org.resinanzz.adversaries.entity.PunchProjectileEntity;
 
 public class PunchProjectileRenderer extends EntityRenderer<PunchProjectileEntity> {
-    private PunchProjectileModel model;
+    private final PunchProjectileModel model;
 
     public PunchProjectileRenderer(EntityRendererProvider.Context context) {
         super(context);

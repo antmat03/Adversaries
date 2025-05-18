@@ -8,8 +8,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import org.resinanzz.adversaries.Adversaries;
-import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.component.EnergyHandler;
+import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.init.AdversariesModItems;
 
 @EventBusSubscriber(modid = Adversaries.MOD_ID, bus = EventBusSubscriber.Bus.GAME)

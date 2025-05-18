@@ -7,7 +7,7 @@ import net.neoforged.neoforge.attachment.AttachmentType;
 import java.util.function.Supplier;
 
 public abstract class EnergyHandler {
-    public Player player;
+    public final Player player;
     public EnergyHandler(Player player){
         this.player = player;
     }

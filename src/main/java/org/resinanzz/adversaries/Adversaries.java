@@ -15,9 +15,7 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
-import org.resinanzz.adversaries.init.AdversariesModAttachments;
 import org.resinanzz.adversaries.init.*;
-import org.resinanzz.adversaries.init.AdversariesArmorMaterials;
 import org.resinanzz.adversaries.particle.AdversariesModParticles;
 
 import java.util.*;
@@ -69,7 +67,7 @@ public class Adversaries
     }
 
 
-    @SuppressWarnings({"rawtypes", "unchecked", "rawtypes", "unchecked"})
+    @SuppressWarnings({"rawtypes", "unchecked"})
     private void registerNetworking(final RegisterPayloadHandlersEvent event) {
         final PayloadRegistrar registrar = event.registrar(MOD_ID);
         MESSAGES.forEach((id, networkMessage) -> registrar.playBidirectional(id, ((NetworkMessage) networkMessage).reader(), ((NetworkMessage) networkMessage).handler()));
