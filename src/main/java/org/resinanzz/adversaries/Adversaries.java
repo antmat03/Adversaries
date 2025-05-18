@@ -93,34 +93,6 @@ public class Adversaries
         if (Thread.currentThread().getThreadGroup() == SidedThreadGroups.SERVER)
             workQueue.add(new Tuple<>(action, tick));
     }
-
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
-    }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-            EntityRenderers.register(AdversariesModEntities.PUNCH_PROJECTILE.get(), PunchProjectileRenderer::new);
-        }
-        @SubscribeEvent
-        public static void registerParticleFactories(RegisterParticleProvidersEvent event){
-            event.registerSpriteSet(AdversariesModParticles.PUNCH_PARTICLE.get(), PunchParticle.Provider::new);
-
-        }
-    }
     @SubscribeEvent
     public void tick(ServerTickEvent.Post event) {
         List<Tuple<Runnable, Integer>> actions = new ArrayList<>();
@@ -131,11 +103,5 @@ public class Adversaries
         });
         actions.forEach(e -> e.getA().run());
         workQueue.removeAll(actions);
-
-
     }
-
-
-
-
 }
