@@ -48,7 +48,7 @@ public class AdversariesModItems {
     //armor
     public static final DeferredItem<Item> DEMONBLOOD_CHEST = REGISTRY.register("demonblood_plate", () -> new ArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE,  new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(23))));
     //blockitems
-    public static final DeferredItem<Item> POTION_BLOCK = block(AdversariesModBlocks.POTION_BLOCK);
+    public static final DeferredItem<Item> POTION_BLOCK = block(AdversariesModBlocks.POTION_BLOCK); //first complex item!
     public static final DeferredItem<Item> DEMON_BLOOD_ORE = block(AdversariesModBlocks.DEMON_BLOOD_ORE);
 
     //spawneggs
@@ -86,9 +86,10 @@ public class AdversariesModItems {
                 tabData.accept(AdversariesModItems.DWELLER_HEART.get());
                 tabData.accept(AdversariesModItems.EIK_FAT.get());
                 tabData.accept(AdversariesModItems.GLOWSTONE_CORE.get());
-                //ingots
+                //blocks
                 tabData.accept(AdversariesModBlocks.POTION_BLOCK.get().asItem());
                 tabData.accept(AdversariesModBlocks.DEMON_BLOOD_ORE.get().asItem());
+                //ingots
                 tabData.accept(AdversariesModItems.CRUCIBLE_STEEL_INGOT.get());
                 tabData.accept(AdversariesModItems.CELESTRIUM_INGOT.get());
                 //spawn eggs

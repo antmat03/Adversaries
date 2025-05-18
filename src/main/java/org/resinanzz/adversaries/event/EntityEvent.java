@@ -24,6 +24,7 @@ public class EntityEvent {
 
         if(player.getInventory().contains(AdversariesModItems.TOTEM_OF_FLESH.toStack())){
             if(entity instanceof LivingEntity){
+                //TODO add cool audio
                 EnergyHandler.addEnergy(player, 5, AdversariesModAttachments.BLOOD_ENERGY, AdversariesModAttachments.BLOOD_ENERGY_LIMIT);
             } else if (entity instanceof Monster) {
                 EnergyHandler.addEnergy(player, 2, AdversariesModAttachments.NEBULOUS_ENERGY, AdversariesModAttachments.NEBULOUS_ENERGY_LIMIT);
