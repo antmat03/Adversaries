@@ -32,4 +32,11 @@ public class ModClientEvent {
         event.registerSpriteSet(AdversariesModParticles.PUNCH_PARTICLE.get(), PunchParticle.Provider::new);
 
     }
+    @SubscribeEvent
+    public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(AdversariesModEntities.OVERWORLD_CHAMPION.get(), OverworldChampionRenderer::new);
+        event.registerEntityRenderer(AdversariesModEntities.ANGEL.get(), AngelEntityRenderer::new);
+        event.registerEntityRenderer(AdversariesModEntities.WIZARD_ELF.get(), ElfEntityRenderer::new);
+        event.registerEntityRenderer(AdversariesModEntities.PUNCH_PROJECTILE.get(), PunchProjectileRenderer::new);
+    }
 }
