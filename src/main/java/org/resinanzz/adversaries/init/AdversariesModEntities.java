@@ -14,8 +14,6 @@ import org.resinanzz.adversaries.Adversaries;
 import org.resinanzz.adversaries.entity.*;
 import oshi.jna.platform.mac.SystemB;
 
-
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class AdversariesModEntities {
     public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, Adversaries.MOD_ID);
     public static final DeferredHolder<EntityType<?>, EntityType<OverworldChampionEntity>> OVERWORLD_CHAMPION = register("overworld_champion",
@@ -27,7 +25,13 @@ public class AdversariesModEntities {
             .setTrackingRange(15)
             .setUpdateInterval(3)
             .sized(0.8f, 2f));
+
     public static final DeferredHolder<EntityType<?>, EntityType<WizardElfEntity>> WIZARD_ELF = register("wizard_elf_adv", EntityType.Builder.<WizardElfEntity>of(WizardElfEntity::new, MobCategory.CREATURE)
+            .setShouldReceiveVelocityUpdates(true)
+            .setTrackingRange(15)
+            .setUpdateInterval(3)
+            .sized(0.7f, 1.4f));
+    public static final DeferredHolder<EntityType<?>, EntityType<PrisonerEntity>> PRISONER = register("prisoner", EntityType.Builder.<PrisonerEntity>of(PrisonerEntity::new, MobCategory.CREATURE)
             .setShouldReceiveVelocityUpdates(true)
             .setTrackingRange(15)
             .setUpdateInterval(3)

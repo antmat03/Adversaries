@@ -23,6 +23,7 @@ public class AdversariesModItems {
     public static final DeferredItem<Item> CRUCIBLE_STEEL_INGOT = REGISTRY.register("crucible_steel_ingot", ()-> new Item(new Item.Properties().stacksTo(64)));
     public static final DeferredItem<Item> RAW_DEMON_BLOOD = REGISTRY.register("raw_demon_blood", DemonBloodOreItem::new);
     public static final DeferredItem<Item> SKULL = REGISTRY.register("ancient_skull", ()-> new Item(new Item.Properties().stacksTo(64)));
+    public static final DeferredItem<Item> ANCIENT_ASH = REGISTRY.register("ancient_ash", ()-> new Item(new Item.Properties().stacksTo(64)));
 
     //tools
     public static final DeferredItem<Item> SOUL_STONE = REGISTRY.register("soul_stone", SoulStoneItem::new);
@@ -50,13 +51,14 @@ public class AdversariesModItems {
     public static final DeferredItem<Item> OVERWORLD_CHAMPION_SPAWN_EGG = REGISTRY.register("overworld_champion_spawn_egg", () -> new DeferredSpawnEggItem(AdversariesModEntities.OVERWORLD_CHAMPION, -16777216, -10092544, new Item.Properties()));
     public static final DeferredItem<Item> ANGEL_SPAWN_EGG = REGISTRY.register("angel_spawn_egg", () -> new DeferredSpawnEggItem(AdversariesModEntities.ANGEL, -16777216, -10092544, new Item.Properties()));
     public static final DeferredItem<Item> WIZARD_ELF_SPAWN_EGG = REGISTRY.register("wizard_elf_spawn_egg", () -> new DeferredSpawnEggItem(AdversariesModEntities.WIZARD_ELF, -16777216, -10092544, new Item.Properties()));
+    public static final DeferredItem<Item> PRISONER_SPAWN_EGG = REGISTRY.register("prisoner_spawn_egg", () -> new DeferredSpawnEggItem(AdversariesModEntities.PRISONER, -16777216, -10092544, new Item.Properties()));
     //runes
     public static final DeferredItem<Item> FIRE_SIGIL = REGISTRY.register("fire_sigil", ()-> new Item(new Item.Properties().stacksTo(64)));
     public static final DeferredItem<Item> INFINITE_DEATH = REGISTRY.register("infinite_death", InfiniteDeathItem::new);
 
     //food
     public static final DeferredItem<Item> PURIFIED_FLESH = REGISTRY.register("purified_flesh", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
-    public static final DeferredItem<Item> FREYAN_DUST = REGISTRY.register("freyan_dust", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
+    public static final DeferredItem<Item> EIK_FAT = REGISTRY.register("eik_fat", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
     public static final DeferredItem<Item> DWELLER_HEART = REGISTRY.register("dweller_heart", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
     public static final DeferredItem<Item> GLOWSTONE_CORE = REGISTRY.register("glowstone_core", ()-> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).alwaysEdible().saturationModifier(0).fast().build()).stacksTo(64)));
     private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {

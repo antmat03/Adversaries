@@ -26,6 +26,7 @@ public class AdversariesModTabs {
                 tabData.accept(AdversariesModItems.RAW_DEMON_BLOOD.get());
                 tabData.accept(AdversariesModItems.CELESTRIUM_INGOT.get());
                 tabData.accept(AdversariesModItems.CRUCIBLE_STEEL_INGOT.get());
+                tabData.accept(AdversariesModItems.ANCIENT_ASH.get());
                 tabData.accept(AdversariesModItems.DEBUG_WAND.get());
                 tabData.accept(AdversariesModItems.WARBRAND.get());
                 tabData.accept(AdversariesModItems.SCROLL.get());
@@ -33,6 +34,7 @@ public class AdversariesModTabs {
                 tabData.accept(AdversariesModItems.OVERWORLD_CHAMPION_SPAWN_EGG.get());
                 tabData.accept(AdversariesModItems.ANGEL_SPAWN_EGG.get());
                 tabData.accept(AdversariesModItems.WIZARD_ELF_SPAWN_EGG.get());
+                tabData.accept(AdversariesModItems.PRISONER_SPAWN_EGG.get());
                 tabData.accept(AdversariesModItems.GAUNTLET_OF_RAGE.get());
                 tabData.accept(AdversariesModItems.FIRE_SIGIL.get());
                 tabData.accept(AdversariesModItems.INFINITE_DEATH.get());
@@ -59,6 +61,8 @@ public class AdversariesModTabs {
         } else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
             tabData.accept(AdversariesModItems.OVERWORLD_CHAMPION_SPAWN_EGG.get());
             tabData.accept(AdversariesModItems.ANGEL_SPAWN_EGG.get());
+            tabData.accept(AdversariesModItems.WIZARD_ELF_SPAWN_EGG.get());
+            tabData.accept(AdversariesModItems.PRISONER_SPAWN_EGG.get());
         }
     }
 }

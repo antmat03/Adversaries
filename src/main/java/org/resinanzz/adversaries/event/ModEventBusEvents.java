@@ -3,10 +3,12 @@ package org.resinanzz.adversaries.event;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import org.resinanzz.adversaries.Adversaries;
 import org.resinanzz.adversaries.client.models.PunchProjectileModel;
 import org.resinanzz.adversaries.entity.*;
+import org.resinanzz.adversaries.init.AdversariesModEntities;
 
 @EventBusSubscriber(modid = Adversaries.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {
@@ -27,6 +29,7 @@ public class ModEventBusEvents {
         event.put(AdversariesModEntities.OVERWORLD_CHAMPION.get(), OverworldChampionEntity.createAttributes().build());
         event.put(AdversariesModEntities.ANGEL.get(), AngelEntity.createAttributes().build());
         event.put(AdversariesModEntities.WIZARD_ELF.get(), WizardElfEntity.createAttributes().build());
+        event.put(AdversariesModEntities.PRISONER.get(), PrisonerEntity.createAttributes().build());
 
     }
 }
