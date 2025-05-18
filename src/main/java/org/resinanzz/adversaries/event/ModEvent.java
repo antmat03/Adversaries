@@ -45,13 +45,17 @@ public class ModEvent {
     public static void ItemRightClicked(PlayerInteractEvent.RightClickItem event){
         Player player = event.getEntity();
         Level level = event.getLevel();
-
         if(level.isClientSide){return;}
 
         if(event.getItemStack().is(AdversariesModItems.REACTIVE_STRIP)){
-            player.displayClientMessage(Component.literal(player.getData(AdversariesModAttachments.BLOOD_ENERGY).toString()), false);
+            player.displayClientMessage(Component.literal("Dark Blood: " + player.getData(AdversariesModAttachments.BLOOD_ENERGY).toString()), false);
+        }else if (event.getItemStack().is(AdversariesModItems.BRAIN_SCANNER)){
+            player.displayClientMessage(Component.literal( "Nebula: " + player.getData(AdversariesModAttachments.NEBULOUS_ENERGY).toString()), false);
+        }else if (event.getItemStack().is(AdversariesModItems.GRADUATED_DREAM_CATCHER)){
+            player.displayClientMessage(Component.literal("Faye: " + player.getData(AdversariesModAttachments.FAYE_ENERGY).toString()), false);
+        }else if (event.getItemStack().is(AdversariesModItems.ELECTROCHROMALOG)){
+            player.displayClientMessage(Component.literal("Phosphenes: " + player.getData(AdversariesModAttachments.PHOSPHENE_ENERGY).toString()), false);
         }
-
     }
 
     @SubscribeEvent
