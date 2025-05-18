@@ -27,6 +27,8 @@
   "item.adversaries.reactive_strip": "Reactive Strip",
   "item.adversaries.crucible_steel_ingot": "Crucible Steel Ingot",
   "item.adversaries.celestrium_ingot": "Celestrium Ingot",
+  "item.adversaries.ancient_skull": "Ancient Skull",
+  "item.adversaries.ancient_ash": "Ancient Ash",
   "_comment": "tools",
   "item.adversaries.debug_wand": "Debug Wand",
   "item.adversaries.totem_of_flesh": "Totem of Flesh",
@@ -36,5 +38,8 @@
   "item.adversaries.skull": "Skull",
   "item.adversaries.warbrand": "Ancient Warbrand",
   "item.adversaries.gauntlet": "Gauntlet of Rage",
-  "item.adversaries.lambdameter": "Lambdameter"
+  "item.adversaries.lambdameter": "Lambdameter",
+  "item.adversaries.electrochromalog": "Electrochromalog",
+  "item.adversaries.brain_scanner": "Brain Scanner",
+  "item.adversaries.graduated_dream_catcher": "Graduated Dream Catcher"
 }
