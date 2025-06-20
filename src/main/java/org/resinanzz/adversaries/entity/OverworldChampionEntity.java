@@ -16,17 +16,24 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import org.resinanzz.adversaries.entity.ai.BossAttackGoal;
 import org.resinanzz.adversaries.entity.ai.BossTargetingGoal;
+import org.resinanzz.adversaries.init.AdversariesModEntities;
 
-public class OverworldChampionEntity<T extends LivingEntity> extends PathfinderMob {
+public class OverworldChampionEntity extends Monster {
     public static final EntityDataAccessor<Integer> DATA_phase = SynchedEntityData.defineId(OverworldChampionEntity.class, EntityDataSerializers.INT);
     private boolean isAggro;
+    private int count;
 
     public OverworldChampionEntity(EntityType<OverworldChampionEntity> type, Level world) {
         super(type, world);
@@ -37,10 +44,9 @@ public class OverworldChampionEntity<T extends LivingEntity> extends PathfinderM
     }
 
    private final ServerBossEvent bossEvent = new ServerBossEvent(
-           Component.literal("Overworld Champion"),
-           BossEvent.BossBarColor.RED,
+           Component.literal("Champion of the Overworld: Asmund"),
+           BossEvent.BossBarColor.GREEN,
            BossEvent.BossBarOverlay.PROGRESS
-
    );
 
     @Override
@@ -51,13 +57,10 @@ public class OverworldChampionEntity<T extends LivingEntity> extends PathfinderM
 
     @Override
     protected void registerGoals(){
-
-        //default working goal
-
-        this.goalSelector.addGoal(1, new BossAttackGoal(this, 2.0, 10, true));
-        //this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 2.0, true));
+        this.goalSelector.addGoal(1, new BossAttackGoal(this, 1.0,  true));
+        this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.3));
+        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, new BossTargetingGoal<>(this, Player.class, false));
-        //this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, false));
     }
 
 
@@ -95,6 +98,7 @@ public class OverworldChampionEntity<T extends LivingEntity> extends PathfinderM
     public void addAdditionalSaveData(CompoundTag compound) {
         super.addAdditionalSaveData(compound);
         compound.putInt("Dataphase", this.entityData.get(DATA_phase));
+        compound.putBoolean("isSlow", false);
     }
 
     @Override
@@ -119,17 +123,18 @@ public class OverworldChampionEntity<T extends LivingEntity> extends PathfinderM
     }
 
     public static void init(RegisterSpawnPlacementsEvent event) {
+        event.register(AdversariesModEntities.PRISONER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.WORLD_SURFACE_WG, Animal::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-        builder = builder.add(Attributes.MAX_HEALTH, 100);
-        builder = builder.add(Attributes.ARMOR, 2);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.6);
+        builder = builder.add(Attributes.MAX_HEALTH, 300);
+        builder = builder.add(Attributes.ARMOR, 0);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
         builder = builder.add(Attributes.FOLLOW_RANGE, 40);
         builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
-        builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.5);
+        builder = builder.add(Attributes.ATTACK_KNOCKBACK, 3);
         return builder;
     }
 }

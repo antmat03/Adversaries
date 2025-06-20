@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "adversaries:celestrium_alloy_dust"
+  },
+  "result": {
+    "id": "adversaries:celestrium_ingot"
+  }
+}

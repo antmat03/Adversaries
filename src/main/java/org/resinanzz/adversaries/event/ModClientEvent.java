@@ -10,10 +10,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import org.resinanzz.adversaries.Adversaries;
-import org.resinanzz.adversaries.client.AngelEntityRenderer;
-import org.resinanzz.adversaries.client.ElfEntityRenderer;
-import org.resinanzz.adversaries.client.OverworldChampionRenderer;
-import org.resinanzz.adversaries.client.PrisonerRenderer;
+import org.resinanzz.adversaries.client.*;
 import org.resinanzz.adversaries.client.magicRenderers.PunchProjectileRenderer;
 import org.resinanzz.adversaries.init.AdversariesModEntities;
 import org.resinanzz.adversaries.particle.AdversariesModParticles;
@@ -44,5 +41,6 @@ public class ModClientEvent {
         event.registerEntityRenderer(AdversariesModEntities.WIZARD_ELF.get(), ElfEntityRenderer::new);
         event.registerEntityRenderer(AdversariesModEntities.PUNCH_PROJECTILE.get(), PunchProjectileRenderer::new);
         event.registerEntityRenderer(AdversariesModEntities.PRISONER.get(), PrisonerRenderer::new);
+        event.registerEntityRenderer(AdversariesModEntities.DEER.get(), DeerEntityRenderer::new);
     }
 }

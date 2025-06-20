@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "adversaries:deer_fat"
+  },
+  "result": {
+    "id": "adversaries:deer_tallow"
+  }
+}

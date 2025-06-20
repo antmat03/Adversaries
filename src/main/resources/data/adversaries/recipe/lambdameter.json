@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "adversaries:electrochromalog"
+    },
+    {
+      "item": "adversaries:graduated_dream_catcher"
+    },
+    {
+      "item": "adversaries:reactive_strip"
+    },
+    {
+      "item": "adversaries:brain_scanner"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "adversaries:lambdameter"
+  }
+}

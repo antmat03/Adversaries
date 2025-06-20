@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "///",
+    "@#@",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "@": {
+      "item": "adversaries:celestrium_ingot"
+    }
+  },
+  "result": {
+    "id": "adversaries:graduated_dream_catcher",
+    "count": 1
+  }
+}

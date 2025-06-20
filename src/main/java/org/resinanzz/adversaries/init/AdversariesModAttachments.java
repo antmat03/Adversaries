@@ -10,17 +10,15 @@ import java.util.function.Supplier;
 
 public class AdversariesModAttachments {
     public static final DeferredRegister<AttachmentType<?>> REGISTRY = DeferredRegister.create(NeoForgeRegistries.ATTACHMENT_TYPES, Adversaries.MOD_ID);
-
+    public static final Supplier<AttachmentType<Integer>> FAYE_ENERGY = REGISTRY.register("faye_energy", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
     public static final Supplier<AttachmentType<Integer>> BLOOD_ENERGY = REGISTRY.register("blood_energy", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
     public static final Supplier<AttachmentType<Integer>> PHOSPHENE_ENERGY = REGISTRY.register("phosphene_energy", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
     public static final Supplier<AttachmentType<Integer>> NEBULOUS_ENERGY = REGISTRY.register("nebulous_energy", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
-    public static final Supplier<AttachmentType<Integer>> FAYE_ENERGY = REGISTRY.register("faye_energy", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
 
-
+    public static final Supplier<AttachmentType<Integer>> FAYE_ENERGY_LIMIT = REGISTRY.register("faye_energy_limit", () -> AttachmentType.builder(() -> 20).serialize(Codec.INT).build());
     public static final Supplier<AttachmentType<Integer>> BLOOD_ENERGY_LIMIT = REGISTRY.register("blood_energy_limit", () -> AttachmentType.builder(() -> 20).serialize(Codec.INT).build());
     public static final Supplier<AttachmentType<Integer>> PHOSPHENE_ENERGY_LIMIT = REGISTRY.register("phosphene_energy_limit", () -> AttachmentType.builder(() -> 20).serialize(Codec.INT).build());
     public static final Supplier<AttachmentType<Integer>> NEBULOUS_ENERGY_LIMIT = REGISTRY.register("nebulous_energy_limit", () -> AttachmentType.builder(() -> 20).serialize(Codec.INT).build());
-    public static final Supplier<AttachmentType<Integer>> FAYE_ENERGY_LIMIT = REGISTRY.register("faye_energy_limit", () -> AttachmentType.builder(() -> 20).serialize(Codec.INT).build());
 
 
 }

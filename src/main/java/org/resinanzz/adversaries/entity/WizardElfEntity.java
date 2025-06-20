@@ -17,7 +17,7 @@ public class WizardElfEntity<T extends LivingEntity> extends PathfinderMob {
     public static final EntityDataAccessor<Integer> DATA_phase = SynchedEntityData.defineId(WizardElfEntity.class, EntityDataSerializers.INT);
     public WizardElfEntity(EntityType<WizardElfEntity> Type, Level level) {
         super(Type, level);
-        xpReward = 0;
+        xpReward = 7;
         setNoAi(true);
         setPersistenceRequired();
     }

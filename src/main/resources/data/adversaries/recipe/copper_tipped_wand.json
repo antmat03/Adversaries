@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  M",
+    " ! ",
+    "M  "
+  ],
+  "key": {
+    "!": {
+      "item": "adversaries:wood_wand"
+    },
+    "M": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "id": "adversaries:copper_tipped_wand",
+    "count": 1
+  }
+}

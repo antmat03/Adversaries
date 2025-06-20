@@ -14,15 +14,14 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
-public class AngelEntity<T extends LivingEntity> extends PathfinderMob {
+public class AngelEntity extends PathfinderMob {
     public static final EntityDataAccessor<Integer> DATA_phase = SynchedEntityData.defineId(AngelEntity.class, EntityDataSerializers.INT);
     public AngelEntity(EntityType<AngelEntity> Type, Level level) {
         super(Type, level);
         xpReward = 0;
         setNoAi(true);
         setPersistenceRequired();
-
-        this.setCustomName(Component.literal("Angel"));
+        //this.setCustomName(Component.literal("Angel"));
     }
 
     @Override

@@ -6,12 +6,10 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 
 public class BossTargetingGoal<T extends LivingEntity> extends NearestAttackableTargetGoal<T> {
-    private final PathfinderMob mob;
     private Player targetPlayer;
 
     public BossTargetingGoal(PathfinderMob mob, Class<T> targetPlayer, boolean mustSee) {
         super(mob, targetPlayer, false);
-        this.mob = mob;
 
     }
 

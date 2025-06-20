@@ -50,6 +50,7 @@ public class Adversaries
         AdversariesModParticles.REGISTRY.register(modEventBus);
         AdversariesModAttachments.REGISTRY.register(modEventBus);
         AdversariesArmorMaterials.REGISTRY.register(modEventBus);
+        AdversariesDataComponents.REGISTRY.register(modEventBus);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 

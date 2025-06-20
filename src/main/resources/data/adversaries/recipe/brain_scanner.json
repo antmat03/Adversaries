@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "MMM",
+    "@ @",
+    "! !"
+  ],
+  "key": {
+    "!": {
+      "item": "minecraft:lightning_rod"
+    },
+    "M": {
+      "item": "minecraft:iron_ingot"
+    },
+    "@": {
+      "item": "adversaries:celestrium_ingot"
+    }
+  },
+  "result": {
+    "id": "adversaries:brain_scanner",
+    "count": 1
+  }
+}

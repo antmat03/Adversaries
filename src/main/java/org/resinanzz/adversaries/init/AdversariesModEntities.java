@@ -8,14 +8,22 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.resinanzz.adversaries.Adversaries;
 import org.resinanzz.adversaries.entity.*;
+import org.resinanzz.adversaries.entity.projectileEntity.PunchProjectileEntity;
+import org.resinanzz.adversaries.entity.projectileEntity.SparkProjectile;
 
 public class AdversariesModEntities {
     public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, Adversaries.MOD_ID);
-    public static final DeferredHolder<EntityType<?>, EntityType<OverworldChampionEntity>> OVERWORLD_CHAMPION = register("overworld_champion",
-            EntityType.Builder.<OverworldChampionEntity>of(OverworldChampionEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-                    .sized(0.8f, 2.3f));
+    public static final DeferredHolder<EntityType<?>, EntityType<OverworldChampionEntity>> OVERWORLD_CHAMPION = register("overworld_champion", EntityType.Builder.<OverworldChampionEntity>of(OverworldChampionEntity::new, MobCategory.MONSTER)
+            .setShouldReceiveVelocityUpdates(true)
+            .setTrackingRange(64)
+            .setUpdateInterval(3)
+            .sized(0.8f, 2.3f));
     public static final DeferredHolder<EntityType<?>, EntityType<AngelEntity>> ANGEL = register("angel_adv", EntityType.Builder.<AngelEntity>of(AngelEntity::new, MobCategory.CREATURE)
+            .setShouldReceiveVelocityUpdates(true)
+            .setTrackingRange(15)
+            .setUpdateInterval(3)
+            .sized(0.8f, 2f));
+    public static final DeferredHolder<EntityType<?>, EntityType<DeerEntity>> DEER = register("deer", EntityType.Builder.<DeerEntity>of(DeerEntity::new, MobCategory.CREATURE)
             .setShouldReceiveVelocityUpdates(true)
             .setTrackingRange(15)
             .setUpdateInterval(3)
@@ -23,15 +31,18 @@ public class AdversariesModEntities {
 
     public static final DeferredHolder<EntityType<?>, EntityType<WizardElfEntity>> WIZARD_ELF = register("wizard_elf_adv", EntityType.Builder.<WizardElfEntity>of(WizardElfEntity::new, MobCategory.CREATURE)
             .setShouldReceiveVelocityUpdates(true)
-            .setTrackingRange(15)
+            .setTrackingRange(5)
             .setUpdateInterval(3)
             .sized(0.7f, 1.4f));
-    public static final DeferredHolder<EntityType<?>, EntityType<PrisonerEntity>> PRISONER = register("prisoner", EntityType.Builder.<PrisonerEntity>of(PrisonerEntity::new, MobCategory.CREATURE)
+    public static final DeferredHolder<EntityType<?>, EntityType<PrisonerEntity>> PRISONER = register("prisoner", EntityType.Builder.<PrisonerEntity>of(PrisonerEntity::new, MobCategory.MONSTER)
             .setShouldReceiveVelocityUpdates(true)
             .setTrackingRange(15)
             .setUpdateInterval(3)
-            .sized(0.7f, 1.4f));
+            .sized(0.7f, 1.4f)
+            .fireImmune());
     public static final DeferredHolder<EntityType<?>, EntityType<PunchProjectileEntity>> PUNCH_PROJECTILE = register("punch_projectile", EntityType.Builder.<PunchProjectileEntity>of(PunchProjectileEntity::new, MobCategory.MISC)
+            .sized(1.2f, 1.2f));
+    public static final DeferredHolder<EntityType<?>, EntityType<SparkProjectile>> SPARK_PROJECTILE = register("spark_projectile", EntityType.Builder.<SparkProjectile>of(SparkProjectile::new, MobCategory.MISC)
             .sized(1.2f, 1.2f));
 
 

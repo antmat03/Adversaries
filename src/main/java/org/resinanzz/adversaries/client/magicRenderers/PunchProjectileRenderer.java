@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import org.jetbrains.annotations.NotNull;
 import org.resinanzz.adversaries.client.models.PunchProjectileModel;
-import org.resinanzz.adversaries.entity.PunchProjectileEntity;
+import org.resinanzz.adversaries.entity.projectileEntity.PunchProjectileEntity;
 
 public class PunchProjectileRenderer extends EntityRenderer<PunchProjectileEntity> {
     private final PunchProjectileModel model;
