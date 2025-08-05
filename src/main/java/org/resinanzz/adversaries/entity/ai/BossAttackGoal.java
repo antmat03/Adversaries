@@ -157,20 +157,25 @@ public class BossAttackGoal extends MeleeAttackGoal {
     protected void checkAndPerformMove(LivingEntity target) {
         this.checkAndPerformAttack(target);
         ++bossTick;
-        if(bossTick == 400){bossTick = 0;}
-        if (this.bossTick == 100) {
+        float state = 0;
+        if (bossTick == 100) {
+            state = this.mob.getRandom().nextFloat();
+            bossTick = 0;
+        }
+
+        if (state <= 0.28) {
             target.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 60, 1, false, false));
-        } else if(this.bossTick == 200 && this.canPerformRanged(target)){
+        } else if (state == 0.25 && this.canPerformRanged(target)) {
             doLaunchMove(target, 5);
-        } else if (this.bossTick == 300){
+        } else if (state == 0.) {
             doPunchVolleyMove(this.mob.level());
-        } else if (this.bossTick == 0){
+        } else if (state == 4) {
             //this.mob.getTarget().addEffect()
         }
     }
     protected void doLaunchMove(LivingEntity livingEntity, double knockback) {
         this.mob.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 3, false, false));
-        //TODO add effect and audio
+        //TODO add Effect and audio
         Adversaries.queueServerWork(40,()->{
             if (knockback > 0.0) {
             Vec3 vec3 = this.mob.getLookAngle().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6);
