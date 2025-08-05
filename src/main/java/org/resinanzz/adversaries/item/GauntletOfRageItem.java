@@ -26,7 +26,7 @@ public class GauntletOfRageItem extends SwordItem {
         int energy = EnergyHandler.getCurrentEnergy(player, AdversariesModAttachments.BLOOD_ENERGY);
             if(energy >= 5 && !player.isCrouching()){
                 // ((ServerLevel)player.level()).sendParticles(ParticleTypes.EXPLOSION,player.getX(),player.getY() ,player.getZ() , 1, 0.4,0.4,0.4, 0);
-                PunchProjectileEntity.shoot(player, 1, 2, 0d, 1f, 1,0);
+                PunchProjectileEntity.shoot(player, 1, 4, 1d, 1f, 1,0);
                 //EnergyHandler.addEnergy(player,-5, AdversariesModAttachments.BLOOD_ENERGY);
                 player.getCooldowns().addCooldown(this, 7);
                 player.swing(hand);
