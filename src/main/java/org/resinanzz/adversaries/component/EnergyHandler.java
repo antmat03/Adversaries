@@ -67,4 +67,7 @@ public class EnergyHandler {
         player.setData(AdversariesModAttachments.PHOSPHENE_ENERGY, 0);
         player.setData(AdversariesModAttachments.FAYE_ENERGY, 0);
     }
+    public static void addLevel(Player player,Supplier<AttachmentType<Integer>> type){
+        player.setData(type, player.getData(type) + 1);
+    }
 }
