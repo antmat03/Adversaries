@@ -62,18 +62,19 @@ public class ModEvent {
         if(level.isClientSide){return;}
 
         if(event.getItemStack().is(AdversariesModItems.REACTIVE_STRIP)){
-            player.displayClientMessage(Component.literal("Dark Blood: " + player.getData(AdversariesModAttachments.BLOOD_ENERGY).toString() + "/" + player.getData(AdversariesModAttachments.BLOOD_ENERGY_LIMIT)), false);
+            player.displayClientMessage(Component.literal("Blood Concentration: " + player.getData(AdversariesModAttachments.BLOOD_ENERGY).toString() + "/" + player.getData(AdversariesModAttachments.BLOOD_ENERGY_LIMIT)), false);
         }else if (event.getItemStack().is(AdversariesModItems.BRAIN_SCANNER)){
-            player.displayClientMessage(Component.literal( "Nebula: " + player.getData(AdversariesModAttachments.NEBULOUS_ENERGY).toString() + "/" + player.getData(AdversariesModAttachments.BLOOD_ENERGY_LIMIT)), false);
+            player.displayClientMessage(Component.literal( "Nebula Spirit: " + player.getData(AdversariesModAttachments.NEBULOUS_ENERGY).toString() + "/" + player.getData(AdversariesModAttachments.NEBULOUS_ENERGY_LIMIT)), false);
         }else if (event.getItemStack().is(AdversariesModItems.GRADUATED_DREAM_CATCHER)){
-            player.displayClientMessage(Component.literal("Faye: " + player.getData(AdversariesModAttachments.FAYE_ENERGY).toString() + "/" + player.getData(AdversariesModAttachments.BLOOD_ENERGY_LIMIT)), false);
+            player.displayClientMessage(Component.literal("Faye Aura: " + player.getData(AdversariesModAttachments.FAYE_ENERGY).toString() + "/" + player.getData(AdversariesModAttachments.FAYE_ENERGY_LIMIT)), false);
         }else if (event.getItemStack().is(AdversariesModItems.ELECTROCHROMALOG)){
-            player.displayClientMessage(Component.literal("Phosphenes: " + player.getData(AdversariesModAttachments.PHOSPHENE_ENERGY).toString() + "/" + player.getData(AdversariesModAttachments.BLOOD_ENERGY_LIMIT)), false);
+            player.displayClientMessage(Component.literal("Phosphene Intensity: " + player.getData(AdversariesModAttachments.PHOSPHENE_ENERGY).toString() + "/" + player.getData(AdversariesModAttachments.PHOSPHENE_ENERGY_LIMIT)), false);
         }
+
     }
 
     @SubscribeEvent
-    public static void  entityJoins(EntityJoinLevelEvent event) {
+    public static void entityJoins(EntityJoinLevelEvent event) {
 
         if (event.getLevel().isClientSide) {
             Entity entity = event.getEntity();
