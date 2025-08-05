@@ -20,5 +20,9 @@ public class AdversariesModAttachments {
     public static final Supplier<AttachmentType<Integer>> PHOSPHENE_ENERGY_LIMIT = REGISTRY.register("phosphene_energy_limit", () -> AttachmentType.builder(() -> 20).serialize(Codec.INT).build());
     public static final Supplier<AttachmentType<Integer>> NEBULOUS_ENERGY_LIMIT = REGISTRY.register("nebulous_energy_limit", () -> AttachmentType.builder(() -> 20).serialize(Codec.INT).build());
 
+    public static final Supplier<AttachmentType<Integer>> FAYE_ENERGY_UPGRADE = REGISTRY.register("faye_energy_upgrade", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
+    public static final Supplier<AttachmentType<Integer>> BLOOD_ENERGY_UPGRADE = REGISTRY.register("blood_energy_upgrade", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
+    public static final Supplier<AttachmentType<Integer>> PHOSPHENE_ENERGY_UPGRADE = REGISTRY.register("phosphene_energy_upgrade", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
+    public static final Supplier<AttachmentType<Integer>> NEBULOUS_ENERGY_UPGRADE = REGISTRY.register("nebulous_energy_upgrade", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build());
 
 }
